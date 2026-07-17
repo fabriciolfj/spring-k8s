@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  shutdown: GRACEFUL
+  tomcat:
+    connection-timeout: 5s
+    keep-alive-timeout: 15s
+    accept-count: 100
+    threads:
+      max: 200
+      min-spare: 5
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product
+    password: root
+    username: root
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/product
+    user: root
+    password: root
