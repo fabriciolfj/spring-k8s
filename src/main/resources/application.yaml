@@ -21,3 +21,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/product
     user: root
     password: root
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
